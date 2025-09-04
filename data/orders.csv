@@ -1,0 +1,12 @@
+order_id,customer_id,order_date,amount,status
+O1001,C001,2024-06-01,250,Delivered
+O1002,C002,2024-06-03,150,Delivered
+O1003,C009,2024-06-05,300,Placed
+O1004,C003,bad_date,200,Cancelled
+O1005,C004,2024-06-08,-50,Delivered
+O1006,C005,2024-06-09,100,Shipped
+O1002,C002,2024-06-03,150,Delivered
+O1007,,2024-06-10,120,Placed
+O1008,C001,2024-06-11,abc,Placed
+O1009,C001,2024-06-12,180,Delivered
+O1010,C004,2024-06-13,100,Cancelled
