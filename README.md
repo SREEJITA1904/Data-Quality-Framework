@@ -1,8 +1,8 @@
 
-# Data Quality Monitoring Framework - Sample Project
+# Data Quality Monitoring Framework 
 
-This mini-project demonstrates a simple Data Quality (DQ) framework using CSV files, Python and pandas.
-It is intentionally lightweight so you can run it on your laptop without Databricks or SAS.
+📌 Demonstrates **data governance, reporting continuity, and quality checks** using Python & pandas.  
+This project aligns with real-world **Data Analyst roles in BFSI (like Barclays)** where data quality, lineage, and compliance are key.
 
 ## What is included
 - data/customers.csv  (sample customers)
@@ -13,38 +13,27 @@ It is intentionally lightweight so you can run it on your laptop without Databri
 - metric_definitions.md
 - output/              (where result files are written)
 
-## How to run (basic)
-1. Install Python (3.8+) if you don't have it.
-   - Windows: https://www.python.org/downloads/
-   - Linux: use your package manager (apt, yum, etc.)
+## 🚀 How to Run (Quick Start)
+```bash
+# clone this repo
+git clone https://github.com/SREEJITA1904/Data-Quality-Framework.git
+cd Data-Quality-Framework
 
-2. Open a terminal (Command Prompt on Windows or Terminal on Mac/Linux) and change to the project folder:
-   ```bash
-   cd dq_project
-   ```
+# (optional) create a virtual env
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Mac/Linux
+source venv/bin/activate
 
-3. (Optional but recommended) create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   # Windows:
-   venv\\Scripts\\activate
-   # mac / linux:
-   source venv/bin/activate
-   ```
+# install dependencies
+pip install -r requirements.txt
 
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+# run DQ checks
+python dq_checks.py
 
-5. Run the DQ checks script:
-   ```bash
-   python dq_checks.py
-   ```
-
-6. Open the output HTML summary:
-   - `output/dq_summary_latest.html` in your browser to see a simple report.
-   - `output/dq_results_latest.csv` contains the raw check rows.
+✅ Open output/dq_summary_latest.html → interactive summary report
+✅ Or output/dq_results_latest.csv → raw results table
 
 ## What the script checks
 - row_count: how many rows in the table
@@ -54,6 +43,9 @@ It is intentionally lightweight so you can run it on your laptop without Databri
 - date_parse: whether dates parse correctly
 - numeric_parse: numeric parsing and negative value count
 - referential_integrity: foreign keys that don't have matching parent keys
+
+👉 [View Sample HTML Report](output/example_dq_summary.html)
+
 
 ## Next steps (improve)
 - Hook the script to a SQL database and run checks via queries
